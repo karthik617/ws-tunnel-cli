@@ -55,7 +55,8 @@ function getPublicUrl(remoteHost, id) {
   }
 
   // Production (Render) → subdomain based
-  return `${protocol}//${id}.${host}`;
+  // return `${protocol}//${id}.${host}`;
+  return `${protocol}//${host}/tunnel/${id}`
 }
 
 function forwardToLocal(req, localPort) {
