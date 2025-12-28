@@ -48,14 +48,6 @@ export function createHttpTunnel(localPort, remoteHost) {
 
 function getPublicUrl(remoteHost, id) {
   const { protocol, host } = new URL(remoteHost.replace("ws", "http"));
-
-  // Local dev → path based
-  if (host.startsWith("localhost") || host.startsWith("127.")) {
-    return `${protocol}//${host}/tunnel/${id}`;
-  }
-
-  // Production (Render) → subdomain based
-  // return `${protocol}//${id}.${host}`;
   return `${protocol}//${host}/tunnel/${id}`
 }
 
