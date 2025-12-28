@@ -1,13 +1,16 @@
 {
-  "name": "@karthik617/ws-tunnel-cli",
+  "name": "@karthik_yk/ws-tunnel-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "websocket tunnel cli",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git@github-personal:karthik617/ws-tunnel-cli.git"
   },
   "bin": {
-    "ws-tunnel": "./bin/tunnel.js"
+    "ws-tunnel": "bin/tunnel.js"
   },
   "dependencies": {
     "ws": "^8.16.0"
